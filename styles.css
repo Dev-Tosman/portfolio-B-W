@@ -86,7 +86,7 @@
 .about-container {
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  gap: 30px;
   border-style: solid;
   border-radius: 30px;
   padding: 5px;
@@ -97,6 +97,7 @@
   border-style: solid;
   border-radius: 30px;
   padding: 10px;
+  gap: 10px;
 }
 
 .about-text {
@@ -104,6 +105,10 @@
   justify-items: center;
   word-spacing: 10px;
   width: 900px;
+}
+
+.about-text h2{
+  text-align: center;
 }
 
 .about-text p {
@@ -121,34 +126,30 @@
 
 .cert-btn {
   text-decoration: none;
-  border-style: solid;
   border-radius: 10px;
   color: black;
-  padding: 5px;
-  position: relative;
-  top: 20px;
-  left: 140px;
+  padding: 1px;
 }
 
 .service-container {
-  padding:  5px;
-  margin: 0;
-}
-
-.services-grid {
+  padding:  20px 10px;
+  margin: auto;
   display: flex;
   flex-direction: column;
-  padding: 20px 10px;
-  gap: 20px;
 }
 
-.services-grid .s1 {
+.services-grid h2{
+  padding-top: 20px;
+}
+
+ .s1 {
   display: flex;
+  flex-direction: row;
   align-items: flex-start;
   border: 1px solid black;
   border-radius: 20px;
   padding: 20px 10px;
-  width: 1010px;
+  margin-top: 20px;
 }
 
 .s1 div {
@@ -156,18 +157,19 @@
 }
 
 .s1 img {
-  width: 426px;
+  width: 476px;
   height: 400px;
   border-radius: 40px;
   border: 18px solid #ddd;
 }
 
 .grid-texts{
-  width: 500px;
+  width: 600px;
 }
 
 .grid-texts p{
   margin-top: 20px;
+  width: 500px;
 }
 
 .project-container {
@@ -375,149 +377,218 @@ bottom: -4px;
 
 
 
-@media (min-width: 1400px) {
+
+
+
+/* Tablet Styles (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
   .main {
-    margin: 0 auto;
-    max-width: 1200px; /* keep content centered */
-  }
-}
-
-/* Laptops & desktops (1025px - 1399px) */
-@media (max-width: 1399px) {
-  .services-grid .s1 {
-    width: 100%; /* avoid overflow */
-  }
-
-  .about-text,
-  .about-education {
-    width: 100%;
-  }
-}
-
-/* Tablets (768px - 1024px) */
-@media (max-width: 1024px) {
-  .main {
-    margin: 0 40px;
+    margin: 0 50px; /* Reduce side margins */
   }
 
   .nav {
-    flex-wrap: wrap;
-    font-size: 20px;
+    padding: 15px;
+    gap: 0.5rem;
+    font-size: 24px; /* Slightly smaller nav font */
+  }
+
+  .nav a {
+    font-size: 24px;
+    padding: 3px;
+  }
+
+  .header-container {
+    margin-top: 120px;
   }
 
   .header-container h1 {
-    font-size: 32px;
-    text-align: center;
+    font-size: 36px;
   }
 
   .header-container p {
-    width: auto;
+    width: 80%;
+    max-width: 400px;
     font-size: 18px;
   }
 
+  .menu-tabs {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 15px 40px;
+    gap: 10px;
+  }
+
+  .menu-tabs a {
+    font-size: 24px;
+    padding: 15px;
+    margin: 5px;
+  }
+
   .about-container {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+    margin: 0 10px;
+  }
+
+  .about-text {
+    width: 70%;
+    max-width: 600px;
+  }
+
+  .about-education {
+    width: 25%;
+    max-width: 250px;
+  }
+
+  .cert-btn {
+    left: 50px;
+    top: 10px;
   }
 
   .services-grid .s1 {
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
+    flex-direction: row;
+    width: 90%;
+    max-width: 800px;
+    padding: 15px;
   }
 
   .s1 img {
-    width: 100%;
-    height: auto;
+    width: 300px;
+    height: 280px;
   }
 
   .grid-texts {
-    width: 100%;
+    width: 45%;
+    max-width: 400px;
   }
 
   .projects {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
   }
 
   .cards {
-    width: 100%;
+    width: 45%;
+    max-width: 500px;
   }
 
   .projects img {
     width: 100%;
+    max-width: 350px;
     height: auto;
   }
 
   .message-box textarea {
-    min-width: 100% !important;
-    max-width: 100% !important;
+    min-width: 90%;
+    max-width: 90%;
+    min-height: 150px;
   }
 }
 
-/* Mobile phones (up to 767px) */
-@media (max-width: 767px) {
+/* Mobile Styles (up to 768px) */
+@media (max-width: 768px) {
   .main {
-    margin: 0 10px;
-    border: none;
+    margin: 0 20px; /* Minimal side margins */
+    border-left: none;
+    border-right: none; /* Remove borders that add width */
   }
 
   .nav {
-    flex-direction: column;
-    gap: 10px;
+    flex-direction: column; /* Stack nav vertically */
+    position: relative; /* Unfix for mobile scrolling */
     padding: 10px;
-    position: static; /* remove fixed nav for mobile */
-    border: none;
+    gap: 0.5rem;
+    margin-top: 0;
+    border-radius: 10px;
   }
 
   .nav a {
-    font-size: 20px;
+    font-size: 18px; /* Smaller font for touch targets */
+    padding: 8px;
+    justify-content: center;
+  }
+
+  .nav a .fa-fw {
+    gap: 5px;
+  }
+
+  .header-container {
+    margin-top: 100px; /* Adjust for smaller nav */
+    text-align: center;
   }
 
   .header-container h1 {
-    font-size: 26px;
+    font-size: 28px;
+    margin-right: 0;
   }
 
   .header-container p {
+    width: 95%;
+    max-width: 300px;
     font-size: 16px;
-    width: auto;
-    padding: 0 10px;
-  }
-
-  .menu-tabs {
-    grid-template-columns: 1fr;
-    margin: 10px;
-  }
-
-  .menu-tabs a {
-    font-size: 22px;
-    padding: 15px;
-  }
-
-  .about-text,
-  .about-education {
-    width: 100%;
-  }
-
-  .cert-btn {
-    left: 0;
-    top: 10px;
-    display: block;
+    word-spacing: 2px;
     margin: 0 auto;
   }
 
-  .services-grid {
+  .menu-tabs {
+    grid-template-columns: 1fr; /* Stack to single column */
+    margin: 10px 20px;
+    gap: 10px;
+  }
+
+  .menu-tabs a {
+    font-size: 20px;
+    padding: 10px;
+    margin: 5px 0;
+    text-align: center;
+  }
+
+  .about-container {
+    flex-direction: column; /* Stack vertically */
+    gap: 10px;
+    margin: 0 10px;
     padding: 10px;
   }
 
-  .s1 {
-    width: 100% !important;
-    flex-direction: column;
+  .about-container div {
+    width: 100%;
+  }
+
+  .about-text {
+    width: 100%;
+    max-width: none;
+    word-spacing: 2px;
+  }
+
+  .about-education {
+    width: 100%;
+    max-width: none;
+  }
+
+  .cert-btn {
+    position: static; /* Remove absolute positioning */
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+  }
+
+  .service-container,
+  .services-grid {
+    padding: 10px;
+    gap: 15px;
+  }
+
+  .services-grid .s1 {
+    flex-direction: column; /* Stack image and text */
     align-items: center;
+    width: 95%;
+    max-width: none;
+    padding: 10px;
   }
 
   .s1 img {
     width: 100%;
+    max-width: 300px;
     height: auto;
   }
 
@@ -526,18 +597,45 @@ bottom: -4px;
     text-align: center;
   }
 
-  .links {
+  .project-container {
     grid-template-columns: 1fr;
   }
 
+  .tools {
+    flex-direction: column; /* Stack tools */
+    gap: 10px;
+  }
+
+  .tools p {
+    width: 100%;
+    max-width: 250px;
+    text-align: center;
+  }
+
+  .links {
+    grid-template-columns: 1fr; /* Single column for links */
+    gap: 10px;
+  }
+
   .links a:nth-child(3) {
-    grid-column: auto;
+    grid-column: auto; /* Reset span */
+  }
+
+  .links a {
+    padding: 15px;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .fa-brands, .fa-solid {
+    padding-left: 0;
+    bottom: 0;
   }
 
   .mid-tabs {
-    flex-direction: column;
-    gap: 15px;
-    text-align: center;
+    flex-direction: column; /* Stack tabs */
+    gap: 10px;
+    align-items: center;
   }
 
   .mid-tabs p {
@@ -545,45 +643,98 @@ bottom: -4px;
   }
 
   .mid-tabs a {
-    padding: 12px 20px;
-    font-size: 16px;
+    padding: 10px 20px;
   }
 
   .projects {
-    flex-direction: column;
-    gap: 15px;
+    flex-direction: column; /* Stack projects vertically */
+    gap: 20px;
+    align-items: center;
   }
 
   .cards {
     width: 100%;
+    max-width: 350px;
+  }
+
+  .projects img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
   }
 
   .project-tags {
-    flex-direction: column;
-    align-items: center;
+    padding: 15px 5px;
+    flex-wrap: wrap;
   }
 
   .project-tags span {
-    padding: 8px 20px;
-    width: auto;
+    padding: 5px 20px; /* Shorter tags */
+    margin: 2px;
+  }
+
+  .tag-2 {
+    grid-template-columns: 1fr; /* Stack tags */
+  }
+
+  .tag-2 span:nth-child(3) {
+    grid-column: auto;
   }
 
   .form-container {
-    padding: 0 10px;
-    font-size: 18px;
+    gap: 10px;
+    font-size: 16px;
+  }
+
+  .message-box form {
+    margin: 0 5px;
+    gap: 8px;
+  }
+
+  .message-box input,
+  .message-box textarea {
+    width: 100%;
+    max-width: none;
+    min-width: auto;
+    padding: 10px;
   }
 
   .message-box textarea {
-    min-width: 100% !important;
-    max-width: 100% !important;
+    min-height: 120px;
+    max-height: 150px;
+  }
+
+  .message-box button {
+    padding: 15px 0;
+  }
+
+  .footer {
+    padding-top: 20px;
   }
 
   .socials {
-    flex-wrap: wrap;
     gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .socials a {
+    font-size: 24px;
   }
 }
 
+/* Optional: Large Desktop (above 1024px) - Minor tweaks for very wide screens */
+@media (min-width: 1025px) {
+  .main {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 
+  .services-grid .s1 {
+    max-width: 1010px;
+  }
 
-
+  .projects {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
