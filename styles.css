@@ -432,8 +432,7 @@ bottom: -4px;
   }
 
   .nav {
-    flex-direction: row; /* Stack nav vertically */
-    position: relative; /* Unfix for mobile scrolling */
+    flex-direction: row; 
     padding: 5px;
     gap: 0.1rem;
     margin-top: 3;
@@ -502,6 +501,7 @@ bottom: -4px;
   }
 
   .about-education {
+    justify-items: center;
     width: 100%;
     max-width: fit-content;
   }
