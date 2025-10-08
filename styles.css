@@ -432,7 +432,8 @@ bottom: -4px;
   }
 
   .nav {
-    flex-direction: row; 
+    flex-direction: row; /* Stack nav vertically */
+    position: relative; /* Unfix for mobile scrolling */
     padding: 5px;
     gap: 0.1rem;
     margin-top: 3;
@@ -444,6 +445,7 @@ bottom: -4px;
     font-size: 18px; /* Smaller font for touch targets */
     padding: 8px;
     justify-content: center;
+    justify-items: center;
   }
 
   .nav a .fa-fw {
@@ -501,9 +503,12 @@ bottom: -4px;
   }
 
   .about-education {
-    justify-items: center;
     width: 100%;
     max-width: fit-content;
+  }
+
+  .about-education h1 p{
+    justify-items: center;
   }
 
   .cert-btn {
