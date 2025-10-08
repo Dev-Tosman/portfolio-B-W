@@ -421,7 +421,13 @@ bottom: -4px;
 
 
 
-
+@media (max-width: 400px) {
+  .nav a{
+    justify-self: center;
+    position: fixed;
+  }
+  
+}
 
 /* Mobile Styles (up to 768px) */
 @media (max-width: 768px) {
