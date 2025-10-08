@@ -443,6 +443,7 @@ bottom: -4px;
     padding: 5px;
     gap: 0.1rem;
     margin-top: 3;
+    position: fixed;
     border-radius: 10px;
     width: 150px;
   }
@@ -459,7 +460,7 @@ bottom: -4px;
   }
 
   .header-container {
-    margin-top: 50px; /* Adjust for smaller nav */
+    margin-top: 100px; /* Adjust for smaller nav */
     text-align: center;
   }
 
