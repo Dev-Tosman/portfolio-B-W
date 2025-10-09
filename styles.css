@@ -421,15 +421,6 @@ bottom: -4px;
 
 
 
-/* @media (max-width: 400px) {
-  .nav a{
-    justify-self: center;
-    position: sticky;
-  }
-  
-} */
-
-/* Mobile Styles (up to 768px) */
 @media (max-width: 768px) {
   .main {
     margin: 0 20px; /* Minimal side margins */
@@ -439,20 +430,16 @@ bottom: -4px;
 
   .nav {
     flex-direction: row; /* Stack nav vertically */
-    position: relative; /* Unfix for mobile scrolling */
     padding: 5px;
     gap: 0.1rem;
-    margin-top: 3;
+    margin-top: 3px;
     position: fixed;
     border-radius: 10px;
-    width: 150px;
   }
 
   .nav a {
-    font-size: 18px; /* Smaller font for touch targets */
+    font-size: 18px; 
     padding: 8px;
-    justify-content: center;
-    justify-items: center;
   }
 
   .nav a .fa-fw {
