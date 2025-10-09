@@ -14,7 +14,6 @@
   display: flex;
   gap: 1rem;
   align-items: center;
-  list-style: none;
   padding: 20px 20px;
   margin-top: 10px;
   justify-self: center;
@@ -34,7 +33,7 @@
   padding: 5px;
 }
 
-.nav a .fa-fw {
+ .fa-fw {
   width: 1.2em;
   text-align: center;
   gap: 10px;
@@ -114,27 +113,10 @@
 .about-text p {
   text-align: center;
 }
-/* 
-.about-education {
-  width: 700px;
-  justify-items: center;
-}
-
-.about-education p {
-  text-align: center;
-}
-
-.cert-btn {
-  border-radius: 10px;
-  color: black;
-  padding: 5px;
-  border-style: solid;
-  justify-content: center;
-} */
 
 .about-education {
     max-width: 600px;
-    margin: 0 auto;
+    margin: 0 0;
     padding: 2rem;
     background-color: #f9f9f9;
     border-radius: 8px;
@@ -202,13 +184,9 @@
   border: 18px solid #ddd;
 }
 
-.grid-texts{
-  width: 600px;
-}
 
 .grid-texts p{
   margin-top: 20px;
-  width: 500px;
 }
 
 .project-container {
@@ -688,7 +666,7 @@ bottom: -4px;
 
   .about-container {
     flex-direction: row;
-    gap: 10px;
+    gap: 20px;
     margin: 0 10px;
   }
 
@@ -699,14 +677,12 @@ bottom: -4px;
 
  .about-education {
     width: 80%;
-    max-width: 400px;
+    max-width: 500px;
   }
 
 
-  .services-grid .s1 {
+   .s1 {
     flex-direction: row;
-    width: 90%;
-    max-width: 800px;
     padding: 15px;
   }
 
@@ -718,11 +694,6 @@ bottom: -4px;
     width: 300px;
     height: 280px;
     margin-top: 50px;
-  }
-
-  .grid-texts {
-    width: 100%;
-    max-width: 400px;
   }
 
   .projects {
