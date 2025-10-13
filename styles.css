@@ -395,24 +395,33 @@ bottom: -4px;
 
 
 
+@media (max-width: 450px) {
+  .nav{
+    display: flex;
+    flex-direction: column !important;
+  }
 
+  .header-container{
+    margin-top: 250px !important;
+  }
+}
 
 
 
 @media (max-width: 768px) {
   .main {
-    margin: 0 20px; /* Minimal side margins */
+    margin: 0 20px; 
     border-left: none;
-    border-right: none; /* Remove borders that add width */
+    border-right: none; 
   }
 
   .nav {
-    flex-direction: row; /* Stack nav vertically */
-    padding: 5px;
+    flex-direction: row; 
     gap: 0.1rem;
     margin-top: 3px;
     position: fixed;
     border-radius: 10px;
+    align-items: center;
   }
 
   .nav a {
@@ -425,7 +434,7 @@ bottom: -4px;
   }
 
   .header-container {
-    margin-top: 100px; /* Adjust for smaller nav */
+    margin-top: 100px; 
     text-align: center;
   }
 
