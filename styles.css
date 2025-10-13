@@ -403,6 +403,9 @@ bottom: -4px;
 
   .header-container{
     margin-top: 250px !important;
+    margin: 0 auto; 
+    left: 0;
+    right: 0;
   }
 }
 
